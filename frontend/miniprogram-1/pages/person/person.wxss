@@ -1,0 +1,37 @@
+page {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.scrollpage {
+  flex: 1;
+  overflow-y: hidden;
+}
+
+/* 在你的页面 wxss 文件中 */
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* 可根据实际情况调整容器的高度 */
+}
+
+.button:hover {
+  background-color: #9b0cdd; /* 鼠标悬停时的背景颜色 */
+}
+
+ .button:active {
+  background-color: #aa1818; /* 鼠标点击时的背景颜色 */
+  transform: scale(0.95); /* 缩小按钮大小 */
+} 
+
+.button {
+  width: 200px;
+  height: 40px;
+  margin-bottom: 10px;
+  background-color: #4CAF50; /* 背景颜色 */
+  color: rgb(0, 0, 0); /* 文字颜色 */
+  border: none; /* 去除边框 */
+  border-radius: 5px; /* 圆角 */
+}

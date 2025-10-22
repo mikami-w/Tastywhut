@@ -1,0 +1,20 @@
+<navigation-bar title="校园集市" back="{{false}}" color="black" background="#FFF"></navigation-bar>
+<scroll-view class="scrollpage" scroll-y type="list">
+  <view class="topimages">
+    <image class="images" src="/images/whutlogo.png"></image>
+  </view>
+  <view class="btncontainer1">
+    <button style="width:200rpx" class="btn_incampus" bind:tap="btn_incampus">校内食堂</button>
+    <button style="width:200rpx" class="btn_outcampus"  bind:tap="btn_outcampus">校外食堂</button>
+  </view>
+  <view class="btncontainer2">
+    <button style="width:200rpx" class="btn_rank" bind:tap="btn_rank">排行</button>
+    <button style="width:200rpx" class="btn_more" bind:tap="btn_more">更多</button>
+  </view>
+</scroll-view>
+<!-- <view class="undernavigator">
+  <button style="width:50rpx" class="btn_under" bind:tap="btn_main">主页</button>
+  <button style="width:50rpx" class="btn_under" bind:tap="btn_main">设置</button>
+  <button style="width:50rpx" class="btn_under" bind:tap="btn_main">排行</button>
+  <button style="width:50rpx" class="btn_under" bind:tap="btn_main">我的</button>
+</view> -->
