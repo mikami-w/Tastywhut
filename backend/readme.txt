@@ -1,0 +1,2 @@
+保持文件结构不要动
+用到的库有flask pandas sqlalchemy pymysql PIL opencv_python numpy
