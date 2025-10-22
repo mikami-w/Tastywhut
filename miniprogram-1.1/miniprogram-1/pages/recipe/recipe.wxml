@@ -1,0 +1,5 @@
+<navigation-bar title="校园集市" back="{{false}}" color="black" background="#FFF"></navigation-bar>
+<scroll-view class="scrollpage" scroll-y type="list">
+  <view>hhhh</view>
+
+</scroll-view>

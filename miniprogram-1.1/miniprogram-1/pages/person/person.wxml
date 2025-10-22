@@ -1,0 +1,10 @@
+<navigation-bar title="校园集市" back="{{false}}" color="black" background="#FFF"></navigation-bar>
+<scroll-view class="scrollpage" scroll-y type="list">
+  <view class="container">
+    <button bindtap="goToMyEvaluation" class="button">我的评价</button>
+    <button class="button">校内学生审核</button>
+    <button class="button">添加小吃评价</button>
+    <button class="button">联系我们</button>
+</view>
+
+</scroll-view>
