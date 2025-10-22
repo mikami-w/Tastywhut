@@ -1,0 +1,65 @@
+/* pages/main/main.wxss */
+page {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.scrollpage {
+  flex: 1;
+  overflow-y: hidden;
+}
+
+.btncontainer1{
+  display:flex;
+  margin-top: 150rpx;
+}
+.btncontainer2{
+  display: flex;
+  margin-top: 100rpx;
+}
+.scrollimages{
+  overflow-x: auto;
+}
+
+.btn_incampus{
+  width:200rpx;
+  height:200rpx;
+  background-color: green;
+  margin-top: auto;
+}
+.btn_outcampus{
+  width:200rpx;
+  height:200rpx;
+  background-color:turquoise;
+  margin-top: auto;
+}
+.btn_more{
+  width:200rpx;
+  height:200rpx;
+  background-color: yellow;
+  margin-top: auto;
+}
+.btn_rank{
+  width:200rpx;
+  height:200rpx;
+  background-color: rgb(100,100,200);
+  margin-top: auto;
+}
+.undernavigator{
+  height:100rpx;
+  margin-bottom: 50
+  rpx;
+  display:flex;
+}
+.topimages{
+  width:750rpx;
+  height:200rpx;
+}
+.images{
+  width:auto;
+  height:200rpx;
+}
+.btn_under{
+  height:100rpx;
+  background-color: gray;
+}
