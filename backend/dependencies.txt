@@ -1,0 +1,1 @@
+flask pandas sqlalchemy pymysql PIL opencv_python numpy
