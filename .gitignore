@@ -1,0 +1,4 @@
+backend/cache
+backend/static
+backend/instance
+*/__pycache__
