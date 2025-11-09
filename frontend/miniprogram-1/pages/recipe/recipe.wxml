@@ -1,5 +1,31 @@
-<navigation-bar title="校园集市" back="{{false}}" color="black" background="#FFF"></navigation-bar>
-<scroll-view class="scrollpage" scroll-y type="list">
-  <view>hhhh</view>
+<navigation-bar title="舌尖吾理" back="{{false}}" color="black" background="#FFF"></navigation-bar>
 
+<view wx:if="{{gotocomments}}" class="searchbox">
+    <view class="top-box">
+      <view class="search-box">
+        <view class="search-icon"><image src="/images/search.png" bind:tap="getsearch"></image></view>
+        <!-- <view class="search-icon"></view> -->
+        <input class="search-input" disabled="{{isloading}}" confirm-type="send" focus="" value="" type="text" placeholder="搜索店铺" placeholder-style="" placeholder-class="input-placeholder" bindconfirm="getsearch" bindinput="getkey"/>
+      </view>
+    </view>
+  </view>
+<scroll-view class="scrollarea" scroll-y type="list" refresher-enabled="{{true}}" refresher-triggered="{{refreshing}}" bindscrolltolower="onReachBottom" bindrefresherrefresh="onPullDownRefresh" >
+  
+  <view class="noshop" wx:if="{{nolist}}" ><text>好像没有找到捏~</text></view>
+  <view class="shop-item" wx:for="{{shoplist}}"  data-star="{{item.star}}" data-id="{{item.id}}" data-name="{{item.name}}" data-image="{{item.image}}" bind:tap="shopbtn">
+  <view class="left-thumb">
+    <!-- <image src="../../images/{{item.image}}"></image> -->
+    <image src="{{item.image}}"></image>
+  </view>
+  <view class="right-info">
+    <text class="shop-title">{{item.name}}</text>
+    <!-- <text>评分：{{item.star}}</text> -->
+    <view class="starsloc">
+      <text>评分：{{item.star}}</text><stars style="margin-left: 10rpx;" starValue="{{item.star}}" disabled="false" isShowStarValue="true" isInteger="true" WH="30">{{item.star}}</stars>
+    </view>
+    <text>电话：{{item.phone}}</text>
+    <text>地址：{{item.address}}</text>
+    <text>营业时间：{{item.openinghour}}</text>
+  </view>
+  </view>
 </scroll-view>

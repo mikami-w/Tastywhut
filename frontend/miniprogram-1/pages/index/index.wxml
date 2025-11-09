@@ -1,5 +1,39 @@
-<!--index.wxml-->
+<!--
 <navigation-bar title="舌尖吾理" back="{{false}}" color="black" background="#FFF"></navigation-bar>
+<scroll-view class="scrollarea" scroll-y type="list">
+  <view class="container">
+    <view class="userinfo">
+      <block wx:if="{{canIUseNicknameComp && !hasUserInfo}}">
+        <button class="avatar-wrapper" open-type="chooseAvatar" bind:chooseavatar="onChooseAvatar">
+          <image class="avatar" src="{{userInfo.avatarUrl}}"></image>
+        </button>
+        <view class="nickname-wrapper">
+          <text class="nickname-label">昵称</text>
+          <input type="nickname" class="nickname-input" placeholder="请输入昵称" bind:change="onInputChange" />
+        </view>
+      </block>
+      <block wx:elif="{{!hasUserInfo}}">
+        <button wx:if="{{canIUseGetUserProfile}}" bindtap="getUserProfile"> 获取头像昵称 </button>
+        <view wx:else> 请使用2.10.4及以上版本基础库 </view>
+      </block>
+      <block wx:else>
+        <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+        <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+      </block>
+    </view>
+    <view class="usermotto">
+      <block wx:if="{{!hasUserInfo}}">
+        <text class="user-motto">{{motto}}</text>
+      </block>
+      <block wx:else>
+        <text class="user-motto"> 欢迎回来：{{userInfo.nickName}}</text>
+        <button bindtap="returnlogin" class="loginbtn" plain="{{false}}" type="primary"> 点击进入 </button>
+      </block>
+      
+    </view>
+  </view>
+</scroll-view> -->
+<navigation-bar title="舌尖吾理" back="{{true}}" color="black" background="#FFF"></navigation-bar>
 <scroll-view class="scrollarea" scroll-y type="list">
   <view class="container">
     <view class="userinfo">
@@ -30,11 +64,11 @@
       </block> -->
     </view>
     <view class="usermotto">
-      <block wx:if="{{!hasUserInfo}}">
+      <block wx:if="{{!hasUserInfo&&!hasuserid}}">
         <text class="user-motto">{{motto}}</text>
       </block>
       <block wx:else>
-        <text class="user-motto"> 欢迎登录：{{userInfo.nickName}}</text>
+        <text class="user-motto" style="text-align: center;"> 欢迎登录：{{userInfo.nickName}}</text>
         <button bindtap="returnlogin" class="loginbtn" plain="{{false}}" type="primary"> 点击进入 </button>
       </block>
       

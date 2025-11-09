@@ -1,0 +1,25 @@
+/* pages/changenickname/changenickname.wxss */
+.scrollarea{
+  width:100%;
+  height:85%;
+}
+/* .container{
+    width:100%;
+    border-top: 1px solid rgba(200, 200, 200, 40);
+    border-bottom: 1px solid rgba(200, 200, 200, 40);
+    height:150rpx;
+    padding-left: 30rpx;
+    align-items: center;
+    background-color: white;
+    display: flex;
+} */
+.weui-input {
+  width: 100%;
+  height: 100rpx;
+  padding-left: 30rpx;
+  line-height: 80px;
+  font-size: 20px;
+  border-top: 1px solid rgba(200, 200, 200, 40);
+  border-bottom: 1px solid rgba(200, 200, 200, 40);
+  background-color: rgba(240,240,240,90);
+}

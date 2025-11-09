@@ -1,0 +1,19 @@
+<!--pages/userinfo/userinfo.wxml-->
+<navigation-bar title="个人信息" back="{{true}}" color="black" background="#FFF"></navigation-bar>
+<scroll-view class="scrollarea" scroll-y type="list">
+  <!-- <view class="avatar" bind:tap="changeavatar"> -->
+  <button style="width:100%" class="avatar" open-type="chooseAvatar" bind:chooseavatar="onChooseAvatar">
+    <text class="left">头像</text>
+    <!-- <image src="{{avatar}}"></image> -->
+    <image src="{{avatar}}"></image>
+    <text style="margin-left: 15rpx;font-weight: bolder;font-size: xx-large;">></text>
+  </button>
+  <view class="name" bind:tap="changenickname">
+    <text style="font-size: larger;">昵称</text>
+    <text style="margin-left: 320rpx;width:240rpx;font-size: larger;text-align: end;">{{nickname}}</text>
+    <text style="margin-left: 15rpx;font-family: 'Times New Roman', Times, serif;font-size:500;font-weight: 500;">></text>
+  </view>
+  <button style="width:100%" class="logout" bind:tap="iflogout">
+    <text style="font-size:larger;font-weight:500;">退出登录</text>
+  </button>
+</scroll-view>

@@ -1,0 +1,41 @@
+<navigation-bar title="舌尖吾理" back="{{false}}" color="black" background="#FFF"></navigation-bar>
+<scroll-view class="scrollpage" scroll-y type="list">
+  <view class="container">
+  <!-- 早餐 -->
+  <view class="meal">
+    <view class="meal-title">今日早餐</view>
+    <view class="meal-content">
+    <!-- 这里填写早餐内容 -->
+    <!-- 1.智园食堂包子<br/>
+    2.智园豆浆<br/> -->
+    <text>1.{{breakfast[0]}}</text>
+    <text>2.{{breakfast[1]}}</text>
+    <text>3.{{breakfast[2]}}</text>
+    </view>
+  </view>
+
+  <!-- 午餐 -->
+  <view class="meal">
+    <view class="meal-title">今日午餐</view>
+    <view class="meal-content">
+      <!-- 这里填写午餐内容 -->
+      <text>1.{{lunch[0]}}</text>
+      <text>2.{{lunch[1]}}</text>
+      <text>3.{{lunch[2]}}</text>
+    </view>
+  </view>
+
+  <!-- 晚餐 -->
+  <view class="meal">
+    <view class="meal-title">今日晚餐</view>
+    <view class="meal-content">
+      <!-- 这里填写晚餐内容 -->
+      <text>1.{{dinner[0]}}</text>
+      <text>2.{{dinner[1]}}</text>
+      <text>3.{{dinner[2]}}</text>
+    </view>
+  </view>
+</view>
+
+
+</scroll-view>

@@ -1,0 +1,23 @@
+<navigation-bar title="关于我们" back="{{true}}" color="black" background="#FFF"></navigation-bar>
+<scroll-view class="scrollpage" scroll-y type="list">
+  
+  
+  <view>
+    <!-- <button bindtap="goToUserAgreement" class="button">用户协议</button>
+    <button bindtap="gotoPrivacyPolicy" class="button">隐私政策</button>
+    <button bindtap="gotoContactUs" class="button">联系我们</button> -->
+    <view class="btnui" bindtap="goToUserAgreement" hover-class="button-hover">
+      <text style="font-weight:520;font-size: 30rpx;padding-left: 25rpx;">用户协议</text>
+      <text style="margin-left:auto;padding-right: 50rpx;font-size: 38rpx;">></text>
+    </view>
+    <view class="btnui" bindtap="gotoPrivacyPolicy" hover-class="button-hover">
+      <text style="font-weight:520;font-size: 30rpx;padding-left: 25rpx;">隐私政策</text>
+      <text style="margin-left:auto;padding-right: 50rpx;font-size: 38rpx;">></text>
+    </view>
+    <view class="btnui" bindtap="gotoContactUs" hover-class="button-hover">
+      <text style="font-weight:520;font-size: 30rpx;padding-left: 25rpx;">联系我们</text>
+      <text style="margin-left:auto;padding-right: 50rpx;font-size: 38rpx;">></text>
+    </view>
+</view>
+
+</scroll-view>

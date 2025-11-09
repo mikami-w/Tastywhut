@@ -55,24 +55,20 @@ Component({
    * 组件的初始数据
    */
   data: {
+    ios:wx.getStorageSync('ios'),
+    innerPaddingRight:wx.getStorageSync('innerPaddingRight'),
+    leftWidth:wx.getStorageSync('leftWidth'),
+    safeAreaTop:wx.getStorageSync('safeAreaTop'),
+    // safeAreaTop:`height: calc(var(--height) + 36px); padding-top: 36px`,
     displayStyle: ''
   },
   lifetimes: {
-    attached() {
-      const rect = wx.getMenuButtonBoundingClientRect()
-      wx.getSystemInfo({
-        success: (res) => {
-          const isAndroid = res.platform === 'android'
-          const isDevtools = res.platform === 'devtools'
-          this.setData({
-            ios: !isAndroid,
-            innerPaddingRight: `padding-right: ${res.windowWidth - rect.left}px`,
-            leftWidth: `width: ${res.windowWidth - rect.left }px`,
-            safeAreaTop: isDevtools || isAndroid ? `height: calc(var(--height) + ${res.safeArea.top}px); padding-top: ${res.safeArea.top}px` : ``
-          })
-        }
-      })
-    },
+    // created(){
+    //   this.navonshow()
+    // },
+    // attached(){
+    //   this.setnav()
+    // }
   },
   /**
    * 组件的方法列表
@@ -92,6 +88,51 @@ Component({
         displayStyle
       })
     },
+    setnav(){
+      const ios=wx.getStorageSync('ios')
+      const innerPaddingRight=wx.getStorageSync('innerPaddingRight')
+      const leftWidth=wx.getStorageSync('leftWidth')
+      const safeAreaTop=wx.getStorageSync('safeAreaTop')
+      this.setData({
+        ios: ios,
+        innerPaddingRight: innerPaddingRight,
+        leftWidth:leftWidth,
+        safeAreaTop: safeAreaTop
+      })
+    },
+    // apponshow() {
+    //   const rect = wx.getMenuButtonBoundingClientRect()
+    //   wx.getSystemInfo({
+    //     success: (res) => {
+    //       const isAndroid = res.platform === 'android'
+    //       const isDevtools = res.platform === 'devtools'
+    //           this.setData({
+    //             ios: !isAndroid,
+    //             innerPaddingRight: `padding-right: ${res.windowWidth - rect.left}px`,
+    //             leftWidth: `width: ${res.windowWidth - rect.left }px`,
+    //             safeAreaTop: isDevtools || isAndroid ? `height: calc(var(--height) + ${res.safeArea.top}px); padding-top: ${res.safeArea.top}px` : ``
+    //           })
+          
+    //     }
+    //   })
+    // },
+    // navonshow() {
+    //   const rect = wx.getMenuButtonBoundingClientRect()
+    //   var device=wx.getDeviceInfo()
+    //   const isAndroid = device.platform === 'android'
+    //   const isDevtools = device.platform === 'devtools'
+    //   var res=wx.getWindowInfo()
+    //   const ios=!isAndroid
+    //   const innerPaddingRight=`padding-right: ${res.windowWidth - rect.left}px`
+    //   const leftWidth=`width: ${res.windowWidth - rect.left }px`
+    //   const safeAreaTop=isDevtools || isAndroid ? `height: calc(var(--height) + ${res.safeArea.top}px); padding-top: ${res.safeArea.top}px` : ``
+    //   wx.setStorageSync('ios', ios)
+    //   wx.setStorageSync('innerPaddingRight', innerPaddingRight)
+    //   wx.setStorageSync('leftWidth', leftWidth)
+    //   wx.setStorageSync('safeAreaTop', safeAreaTop)
+            
+
+    // },
     back() {
       const data = this.data
       if (data.delta) {

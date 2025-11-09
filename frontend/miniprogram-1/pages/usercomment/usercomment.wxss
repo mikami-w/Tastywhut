@@ -1,0 +1,46 @@
+/* pages/usercomment/usercomment.wxss */
+.scrollarea{
+  width:100%;
+  height:85%;
+}
+.container{
+  padding:20rpx;
+  height:400rpx;
+  border: 3rpx solid #efefef;
+  /* 圆角样式 */
+  border-radius: 20rpx;
+  margin: 20rpx;
+}
+.formcontainer{
+  display: flex;
+  width:95%;
+  padding:10rpx;
+  border: 2rpx;
+  border-radius: 15rpx;
+  margin-bottom:15rpx;
+}
+.textcontainer{
+  height:300rpx;
+  width: 95%;
+  line-height: 44px;
+  margin-left:2.5%;
+}
+.sendbutton{
+  height:80rpx;
+  border:2rpx solid black;
+  border-radius:20rpx;
+  background-color: greenyellow;
+}
+.chioce{
+  display: flex;
+  padding-left: 0rpx;
+  width:50%;
+}
+.picker{
+  width:275rpx;
+  height: 50rpx;
+  border:2rpx solid black;
+  border-radius: 5px;
+  margin-left:0;
+  text-align: center;
+}

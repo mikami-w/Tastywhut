@@ -1,15 +1,28 @@
-<navigation-bar title="校园集市" back="{{false}}" color="black" background="#FFF"></navigation-bar>
-<scroll-view class="scrollpage" scroll-y type="list">
+<navigation-bar title="舌尖吾理" back="{{false}}" color="black" background="#FFF"></navigation-bar>
+<scroll-view class="scrollpage" scroll-y type="list" binddragend="showlogin">
   <view class="topimages">
-    <image class="images" src="/images/whutlogo.png"></image>
+    <image class="images" src="/images/tastywhut.jpg"></image>
   </view>
   <view class="btncontainer1">
-    <button style="width:200rpx" class="btn_incampus" bind:tap="btn_incampus">校内食堂</button>
-    <button style="width:200rpx" class="btn_outcampus"  bind:tap="btn_outcampus">校外食堂</button>
+    <!-- <button style="width:200rpx" class="btn_incampus" bind:tap="btn_incampus"><image src="/images/incampuscanteen.png"></image><text>校内食堂</text></button> -->
+    <view class="btn_incampus" bind:tap="btn_incampus">
+    <image class="btnimg1" src="/images/incampuscanteen.png"></image>
+    <text>校内食堂</text>
+    </view>
+    <view class="btn_outcampus" bind:tap="btn_outcampus">
+    <image class="btnimg2" src="/images/outcampus.png"></image>
+    <text style="margin-top: 10rpx;">校外食堂</text>
+    </view>
   </view>
   <view class="btncontainer2">
-    <button style="width:200rpx" class="btn_rank" bind:tap="btn_rank">排行</button>
-    <button style="width:200rpx" class="btn_more" bind:tap="btn_more">更多</button>
+    <view class="btn_rank" bind:tap="btn_rank">
+    <image class="btnimg3" src="/images/rank.png"></image>
+    <text>排行</text>
+    </view>
+    <view class="btn_more" bind:tap="btn_more">
+    <image class="btnimg4" src="/images/more.png"></image>
+    <text style="margin-top: 25rpx;">更多</text>
+    </view>
   </view>
 </scroll-view>
 <!-- <view class="undernavigator">
