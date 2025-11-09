@@ -1,0 +1,80 @@
+/* pages/addfood/addfood.wxss */
+.scrollarea{
+  width:100%;
+  height:90%;
+  background-color: rgba(238,238,238,40);
+}
+.image-wrapper {
+  margin-top: 16rpx;
+  padding: 0;
+  height:240rpx;
+  width: 240rpx !important;
+  border-radius: 8px;
+  border:2px solid black;
+  
+}
+.image {
+  display: block;
+  width: 240rpx;
+  height: 240rpx;
+  margin-left:0; 
+}
+.container{
+  margin-top: 200rpx;
+  padding:20rpx;
+  height:1000rpx;
+  border: 5rpx rgba(230,230,230,50);
+  background-color: white;
+  /* 圆角样式 */
+  border-radius: 20rpx;
+  margin: 20rpx;
+}
+.formcontainer{
+  display: flex;
+  width:95%;
+  padding:10rpx;
+  border: 2rpx;
+  border-radius: 15rpx;
+  margin-bottom:15rpx;
+}
+.textcontainer{
+
+  height:300rpx;
+  width: 95%;
+  line-height: 44px;
+  margin-left:2.5%;
+}
+.namecontainer{
+  border-radius:5px;
+  height:auto;
+  display: flex;
+  margin-top: 30rpx;
+}
+.sendbutton{
+  margin-top: 20rpx;
+  height:80rpx;
+  /* border:2rpx solid #000000; */
+  border-radius:20rpx;
+  background-color: #23bb23;
+  color: white;
+}
+.chioce{
+  display: flex;
+  padding-left: 0rpx;
+  width:50%;
+}
+.nameinput{
+  height:75rpx;
+  width:350rpx;  
+  border:2rpx solid gray;
+  background-color: rgba(200, 200, 200, 10);
+}
+.picker{
+  width:275rpx;
+  height: 50rpx;
+  border:2rpx solid black;
+  border-radius: 5px;
+  margin-right:0;
+  text-align: center;
+  margin-top:20rpx;
+}

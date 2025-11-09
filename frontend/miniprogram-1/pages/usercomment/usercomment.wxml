@@ -1,0 +1,24 @@
+<navigation-bar wx:if="{{show}}" title="我来说两句" back="{{true}}" color="black" background="#FFF"></navigation-bar>
+<!--wx:if="{{show}}"-->
+<scroll-view wx:if="{{show}}" class="scrollarea" scroll-y type="list">
+  <view class="container">
+    <textarea class="textcontainer" maxlength="200" bindinput="content" auto-focus show-confirm-bar confirm-type="return" placeholder="快来说话吧！"/>
+    <form bindsubmit="submitmsg" class="formcontainer">
+    <!-- <radio-group name="place" class="chioce">
+      <label><radio value="incampus"/>校内</label>
+      <label style="margin-left: 40rpx;"><radio value="outcampus"/>校外</label>
+    </radio-group> -->
+    <picker bindchange="bindPickerChange" value="{{index}}" range="{{score}}">
+    <view class="picker">
+      评分：{{score[index]}}
+    </view>
+  </picker>
+   
+    <button form-type="submit" class="sendbutton" style="width:200rpx;margin-left: 420rpx;">发送</button>
+    
+    </form>
+    
+
+  </view>
+  
+</scroll-view>

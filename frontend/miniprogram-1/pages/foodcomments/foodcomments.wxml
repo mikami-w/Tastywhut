@@ -1,0 +1,36 @@
+<!--pages/foodcomments/foodcomments.wxml-->
+<navigation-bar wx:if="{{shownav}}" title="菜品评价" titleback="{{true}}" color="black" background="#FFF"></navigation-bar>
+
+<scroll-view wx:if="{{shownav}}" class="scrollarea" scroll-y type="list" refresher-enabled="{{true}}" refresher-triggered="{{refreshing}}" bindscrolltolower="onReachBottom" bindrefresherrefresh="onPullDownRefresh" >
+  <view class="topcontainer">
+    <image src="{{query.image}}" data-src="{{query.image}}" bind:tap="previewimage"></image>
+    <!-- <image src="../../images/{{query.image}}"></image> -->
+    <view class="topcontent">
+    <text>{{query.name}}</text>
+    <stars style="margin-left:30rpx;display: block;" starValue="{{query.star}}" disabled="false" isShowStarValue="true" isInteger="true" WH="40"></stars>
+    </view>
+  </view>
+  <view class="commentlist" wx:for="{{comments}}" wx:key="id" >
+  <view class="userphoto">
+    <image src="{{item.userimg}}"></image>
+  </view>
+  <view class="right-info">
+    <view style="display: flex;font-size:13px;">
+      <text >{{item.username}}</text>
+      <view style="margin-left:auto;" wx:if="{{item.isowner==1}}"><text bind:tap="deletecomment" data-id="{{item.id}}" style="color:red;font-weight: bolder;padding-right:15rpx;">删除</text></view>
+    </view>
+    <text style="margin-top: 5rpx;">{{item.comment}}</text>
+    <view class="starcontainer">
+      <!-- <text>评分：{{item.star}}</text> -->
+      <stars style="display: block;" starValue="{{item.star}}" disabled="false" isShowStarValue="true" isInteger="true" WH="30">{{item.star}}</stars>
+      <text style="margin-left: 350rpx; ">评分：{{item.star}}</text><text style="margin-left: auto; ">赞：{{item.like}}</text>
+    </view>
+  </view>
+  </view>
+
+</scroll-view>
+<view wx:if="{{shownav}}" class="letmesay">
+  <view style="width:60rpx;height:60rpx;margin-left: 45rpx;margin-top: 5rpx;" bind:tap="intorecipe"><image src="{{starsrc}}"></image></view>
+  <button style="width:450rpx;height:75rpx;" type="primary" bind:tap="navtocomment">我来说两句</button>
+  <view style="width:60rpx;height:60rpx;margin-right: 45rpx;margin-top: 5rpx;" bind:tap="navtoscore"><image src="/images/score.png"></image></view>
+</view>

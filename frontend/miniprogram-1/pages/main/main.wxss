@@ -21,43 +21,79 @@ page {
   overflow-x: auto;
 }
 
-.btn_incampus{
+.btnimg1{
   width:200rpx;
   height:200rpx;
-  background-color: green;
-  margin-top: auto;
+}
+.btnimg2{
+  width:180rpx;
+  height:180rpx;
+  margin-left:10rpx;
+  margin-top: 10rpx;
+}
+.btnimg3{
+  width:200rpx;
+  height:200rpx;
+  margin-left:0rpx;
+}
+.btnimg4{
+  width:150rpx;
+  height:150rpx;
+  margin-left:25rpx;
+  margin-top:25rpx;
+}
+.btn_incampus{
+  width:200rpx;
+  height:250rpx;
+  border:none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  text-align: center;
+  margin-left:110rpx;
 }
 .btn_outcampus{
   width:200rpx;
-  height:200rpx;
-  background-color:turquoise;
-  margin-top: auto;
+  height:250rpx;
+  border:none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  text-align: center;
+  margin-left:110rpx;
 }
 .btn_more{
   width:200rpx;
-  height:200rpx;
-  background-color: yellow;
-  margin-top: auto;
+  height:250rpx;
+  border:none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  text-align: center;
+  margin-left:110rpx;
 }
 .btn_rank{
   width:200rpx;
-  height:200rpx;
-  background-color: rgb(100,100,200);
-  margin-top: auto;
+  height:250rpx;
+  border:none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  text-align: center;
+  margin-left:110rpx;
 }
 .undernavigator{
   height:100rpx;
-  margin-bottom: 50
-  rpx;
+  margin-bottom: 50rpx;
   display:flex;
 }
 .topimages{
   width:750rpx;
-  height:200rpx;
+  height:320rpx;
 }
 .images{
   width:auto;
-  height:200rpx;
+  height:320rpx;
 }
 .btn_under{
   height:100rpx;

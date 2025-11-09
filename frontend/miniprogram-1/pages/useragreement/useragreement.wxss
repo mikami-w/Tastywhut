@@ -1,0 +1,41 @@
+.title {
+  margin-top:50rpx;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 20rpx;
+  text-align: center;
+}
+
+.content {
+  padding: 45rpx;
+  word-wrap: break-word; /* 强制换行 */
+  word-break: break-all;
+
+}
+
+.indent {
+  text-indent: 2em;
+  line-height: 1.5;
+  margin-bottom: 15rpx;
+}
+
+.section {
+  margin-top: 20rpx;
+}
+
+.section-title {
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 40rpx;
+  margin-bottom: 40rpx;
+}
+
+page {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.scrollpage {
+  flex: 1;
+  overflow-y: hidden;
+}

@@ -1,0 +1,11 @@
+<!--pages/changenickname/changenickname.wxml-->
+<navigation-bar title="修改昵称" back="{{true}}" color="black" background="#FFF"></navigation-bar>
+<scroll-view class="scrollarea" scroll-y type="list">
+  <!-- <view class="container"> -->
+  <form bindsubmit="submit">
+    <input name="nickname" class="weui-input" id="nickname-input" maxlength="10" auto-focus placeholder="{{nickname}}"/>
+    
+    <button form-type="submit" type="primary" style="margin-left: 350rpx;margin-top:12rpx;">确认</button>
+  </form>
+  <!-- </view> -->
+</scroll-view>

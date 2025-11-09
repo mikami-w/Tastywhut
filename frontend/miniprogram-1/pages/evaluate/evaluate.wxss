@@ -1,1 +1,48 @@
 /* pages/evaluate/evaluate.wxss */
+
+.scrollarea{
+  width:100%;
+  height:92%;
+}
+
+.shop-item {
+  display: flex;
+  /* 添加边框 */
+  padding: 20rpx;
+  border: 1rpx solid #efefef;
+  /* 圆角样式 */
+  border-radius: 10rpx;
+  margin: 20rpx;
+  /* 盒子阴影 */
+  box-shadow: 1rpx 1rpx 15rpx #ddd;
+}
+.listcontainer{
+  display: flex;
+  padding:5rpx;
+}
+.left-thumb image {
+  width: 250rpx;
+  height: 250rpx;
+  display: block;
+  margin-right: 20rpx;
+  border-radius: 3px;
+}
+.right-info{
+  display: flex;
+  /* 纵向布局 */
+  flex-direction: column;
+  justify-content: space-around;
+  font-size: 24rpx;
+}
+.shop-title{
+  /* 文本加粗 */
+  font-weight: bold;
+}
+.starsloc{
+  
+  display: flex;
+}
+.bottom{
+  padding-top:30rpx;
+  text-align: center;
+}

@@ -1,0 +1,20 @@
+<navigation-bar title="联系我们" back="{{true}}" color="black" background="#FFF"></navigation-bar>
+<scroll-view class="scrollpage" scroll-y type="list">
+
+<view class="contain">
+<view>您可以通过以下两种方式联系我们</view>
+<br/>
+<view class="title">一</view>
+<br/>
+<view>通过复制并搜索群号加入我们的qq群</view>
+<br/>
+<view><text user-select="true" style="color: blue;">830836290</text>加入群聊【舌尖吾理用户聊天室】</view>
+<view class="title">二</view>
+<br/>
+<view>或通过长按保存下方图片</view>
+<br/>
+<view><image show-menu-by-longpress="true" src="https://www.tastywhut.site/getpic?filename=contactus.jpg"></image></view>
+
+</view>
+
+</scroll-view>

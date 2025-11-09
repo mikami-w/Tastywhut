@@ -1,1 +1,24 @@
-<!--pages/evaluate/evaluate.wxml-->
+<navigation-bar title="我的收藏" back="{{true}}" color="black" background="#FFF"></navigation-bar>
+
+<scroll-view class="scrollarea" scroll-y type="list" refresher-enabled="{{true}}" refresher-triggered="{{refreshing}}" bindscrolltolower="onReachBottom" bindrefresherrefresh="onPullDownRefresh" >
+  
+  <view class="shop-item" wx:for="{{shoplist}}"  data-star="{{item.star}}" data-id="{{item.id}}" data-name="{{item.name}}" data-image="{{item.image}}" bind:tap="shopbtn">
+  <view class="left-thumb">
+    <!-- <image src="../../images/{{item.image}}"></image> -->
+    <image src="{{item.image}}"></image>
+  </view>
+  <view class="right-info">
+    <text class="shop-title">{{item.name}}</text>
+    <!-- <text>评分：{{item.star}}</text> -->
+    <view class="starsloc">
+      <text>评分：{{item.star}}</text><stars style="margin-left: 10rpx;" starValue="{{item.star}}" disabled="false" isShowStarValue="true" isInteger="true" WH="30">{{item.star}}</stars>
+    </view>
+    <text>电话：{{item.phone}}</text>
+    <text>地址：{{item.address}}</text>
+    <text>营业时间：{{item.openinghour}}</text>
+  </view>
+  </view>
+  <view wx:if="{{noliked}}" class="bottom">
+    <text>好像还没有收藏呢~</text>
+  </view>
+</scroll-view>

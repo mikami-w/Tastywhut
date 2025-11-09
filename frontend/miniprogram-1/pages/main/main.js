@@ -5,14 +5,14 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    haslogin:false
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
-
+    
   },
 
   /**
@@ -26,7 +26,12 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow() {
-
+    let hasuserinfo=wx.getStorageSync('hasUserInfo');
+    let hasuserid=wx.getStorageSync('hasuserid');
+    let haslogin=hasuserid&&hasuserinfo
+    this.setData({
+      haslogin:haslogin
+    })
   },
 
   /**
@@ -62,5 +67,63 @@ Page({
    */
   onShareAppMessage() {
 
-  }
+  },
+  showlogin(){
+    wx.showModal({
+      title: '您还没有登录呢，请先登录',
+      content: '确定即代表同意授权用户数据',
+      success:function(res){
+        if(res.confirm){
+          wx.navigateTo({
+            url: '/pages/index/index',
+          })
+        }
+        else if(res.cancel){
+          wx.showToast({
+            title: '您取消了登录授权！',
+            duration: 2000,
+            mask:true,
+            icon:'none'
+          })
+        }
+      }
+    })
+  },
+  btn_incampus(e){
+    if(this.data.haslogin){
+      wx.navigateTo({
+        url: '../foodlist/foodlist?id=incampus',
+      })
+    }
+    else{
+      this.showlogin()
+    }
+    
+  },
+  btn_outcampus(e){
+    if(this.data.haslogin){
+      wx.navigateTo({
+        url: '../foodlist/foodlist?id=outcampus',
+      })
+    }
+    else{
+      this.showlogin()
+    }
+  },
+  btn_rank(e){
+    if(this.data.haslogin){
+      wx.navigateTo({
+        url: '../foodlist/foodlist?id=rank',
+      })
+    }
+    else{
+      this.showlogin()
+    }
+  },
+  // btn_more(e){
+  //   wx.navigateTo({
+  //     url: '../foodlist/foodlist?id=incampus',
+  //   })
+  // },
+
 })

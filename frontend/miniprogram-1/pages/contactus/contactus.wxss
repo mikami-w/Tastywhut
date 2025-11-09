@@ -1,0 +1,27 @@
+page {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.scrollpage {
+  flex: 1;
+  overflow-y: hidden;
+}
+
+view{
+  text-align: center;
+}
+image{
+  margin-left: 110rpx;
+  width:450rpx;
+  height:450rpx;
+}
+.title{
+  margin :20rpx;
+  font-weight: bold;
+}
+
+.contain{
+  padding: 40rpx;
+}
+

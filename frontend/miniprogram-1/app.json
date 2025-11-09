@@ -1,12 +1,22 @@
 {
   "pages": [
+    "pages/main/main",
     "pages/index/index",
     "pages/logs/logs",
-    "pages/main/main",
     "pages/person/person",
     "pages/recipe/recipe",
-    "pages/evaluate/evaluate"
-    
+    "pages/mycomment/mycomment",
+    "pages/foodlist/foodlist",
+    "pages/foodcomments/foodcomments",
+    "pages/evaluate/evaluate",
+    "pages/usercomment/usercomment",
+    "pages/addfood/addfood",
+    "pages/userinfo/userinfo",
+    "pages/changenickname/changenickname",
+    "pages/contactus/contactus",
+    "pages/aboutus/aboutus",
+    "pages/privacypolicy/privacypolicy",
+    "pages/useragreement/useragreement"
   ],
   "window": {
     "navigationBarTextStyle": "black",
@@ -32,19 +42,19 @@
       "borderStyle":"white",
     "list": [
     {
-      "selectedIconPath":"images/main.png",
+      "selectedIconPath":"images/bluemain.png",
       "iconPath": "images/main.png",
       "pagePath": "pages/main/main",
       "text": "主页"
     },
     {
-      "selectedIconPath":"images/recipe.png",
-      "iconPath": "images/recipe.png",
+      "selectedIconPath":"images/bluesearch.png",
+      "iconPath": "images/search.png",
       "pagePath": "pages/recipe/recipe",
-      "text": "食谱"
+      "text": "搜索"
     },
     {
-      "selectedIconPath":"images/person.png",
+      "selectedIconPath":"images/blueperson.png",
       "iconPath": "images/person.png",
       "pagePath": "pages/person/person",
       "text": "我的"
