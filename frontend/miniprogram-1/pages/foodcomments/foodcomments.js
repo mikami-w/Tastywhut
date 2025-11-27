@@ -1,4 +1,5 @@
 // pages/foodcomments/foodcomments.js
+const { addPoints, addBrowseHistory } = require('../../utils/util.js')
 
 Page({
 
@@ -30,6 +31,13 @@ Page({
       query:get,
     })
     wx.removeStorageSync('query');
+
+    // 记录浏览历史和积分（已内部异步化，不阻塞页面加载）
+    if (get && get.id) {
+      addBrowseHistory(get.id, get.name);
+      addPoints('browse', 1);
+    }
+
     let accountinfo=__wxConfig.envVersion;
     if(accountinfo=='release')
     {
@@ -287,6 +295,8 @@ Page({
       wx.showToast({
         title: '收藏成功！',
       })
+      // 收藏积分奖励
+      addPoints('collect', 2);
     }
     else{
       this.setData({
