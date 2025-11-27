@@ -365,5 +365,3 @@ wx.setStorageSync('points_o6zAJs9CSd3TzIhJ2PVooRIPd23I', 15);
 ---
 
 **修改日期**：2025年11月27日
-**修改人员**：AI助手
-**版本号**：v1.1.0
