@@ -84,3 +84,90 @@ page {
   width:56rpx;
   height:56rpx;
 }
+
+/* 积分显示样式 */
+.points-section {
+  background-color: white;
+  margin: 15rpx 0;
+  padding: 30rpx 50rpx;
+  border-bottom: 1px solid rgba(200, 200, 200, 40);
+}
+
+.points-display {
+  display: flex;
+  align-items: center;
+}
+
+.points-icon {
+  width: 50rpx;
+  height: 50rpx;
+  margin-right: 20rpx;
+}
+
+.points-text {
+  font-size: 32rpx;
+  font-weight: 600;
+  color: #ff6b35;
+}
+
+/* 浏览记录样式 */
+.history-section {
+  background-color: white;
+  border-bottom: 1px solid rgba(200, 200, 200, 40);
+  max-height: 600rpx;
+  overflow-y: auto;
+}
+
+.history-list {
+  /* 历史记录列表容器样式 */
+}
+
+.no-history {
+  padding: 50rpx;
+  text-align: center;
+  color: #999;
+  font-size: 28rpx;
+}
+
+.history-item {
+  border-bottom: 1px solid rgba(240, 240, 240, 100);
+  padding: 30rpx 50rpx;
+}
+
+.history-item:last-child {
+  border-bottom: none;
+}
+
+.history-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.history-text {
+  font-size: 28rpx;
+  color: #333;
+  font-weight: 500;
+}
+
+.history-time {
+  font-size: 24rpx;
+  color: #999;
+}
+
+/* 注销账号按钮样式 */
+.delete-btn {
+  width: 90%;
+  height: 120rpx;
+  margin: 50rpx auto;
+  border-radius: 20rpx;
+  background-color: #fff5f5;
+  border: 2rpx solid #ff4757;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.delete-hover {
+  background-color: #ffeaea !important;
+}

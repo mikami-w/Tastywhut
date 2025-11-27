@@ -4,75 +4,21 @@
   "setting": {
     "compileHotReLoad": true,
     "skylineRenderEnable": true,
-    "urlCheck": false
+    "urlCheck": false,
+    "coverView": true,
+    "lazyloadPlaceholderEnable": false,
+    "preloadBackgroundData": false,
+    "autoAudits": false,
+    "useApiHook": true,
+    "useApiHostProcess": true,
+    "showShadowRootInWxmlPanel": true,
+    "useStaticServer": false,
+    "useLanDebug": false,
+    "showES6CompileOption": false,
+    "checkInvalidKey": true,
+    "ignoreDevUnusedFiles": true,
+    "bigPackageSizeSupport": false
   },
-  "condition": {
-    "miniprogram": {
-      "list": [
-        {
-          "name": "pages/evaluate/evaluate",
-          "pathName": "pages/evaluate/evaluate",
-          "query": "",
-          "launchMode": "default",
-          "scene": null
-        },
-        {
-          "name": "pages/aboutus/aboutus",
-          "pathName": "pages/aboutus/aboutus",
-          "query": "",
-          "launchMode": "default",
-          "scene": null
-        },
-        {
-          "name": "pages/userinfo/userinfo",
-          "pathName": "pages/userinfo/userinfo",
-          "query": "",
-          "launchMode": "default",
-          "scene": null
-        },
-        {
-          "name": "pages/addfood/addfood",
-          "pathName": "pages/addfood/addfood",
-          "query": "",
-          "launchMode": "default",
-          "scene": null
-        },
-        {
-          "name": "pages/usercomment/usercomment",
-          "pathName": "pages/usercomment/usercomment",
-          "query": "",
-          "launchMode": "default",
-          "scene": null
-        },
-        {
-          "name": "pages/foodcomments/foodcomments",
-          "pathName": "pages/foodcomments/foodcomments",
-          "query": "id=11",
-          "launchMode": "default",
-          "scene": null
-        },
-        {
-          "name": "pages/person/person",
-          "pathName": "pages/person/person",
-          "query": "",
-          "launchMode": "default",
-          "scene": null
-        },
-        {
-          "name": "pages/usercomment/usercomment",
-          "pathName": "pages/usercomment/usercomment",
-          "query": "",
-          "launchMode": "default",
-          "scene": null
-        },
-        {
-          "name": "pages/main/main",
-          "pathName": "pages/main/main",
-          "query": "",
-          "launchMode": "default",
-          "scene": null
-        }
-      ]
-    }
-  }
+  "condition": {},
+  "libVersion": "3.12.0"
 }

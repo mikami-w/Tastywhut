@@ -134,6 +134,7 @@
 
 // index.js
 const defaultAvatarUrl = 'https://mmbiz.qpic.cn/mmbiz/icTdbqWNOwNRna42FI242Lcia07jQodd2FJGIYQfG0LAJGFxM4FbnQP6yfMxBgJ0F3YRqJCJ1aPAK2dQagdusBZg/0'
+const { addPoints } = require('../../utils/util.js')
 
 Component({
   data: {
@@ -271,7 +272,11 @@ Component({
         data:this.data.hasUserInfo
       })
       wx.setStorageSync('openid', this.data.openid);
-      wx.setStorageSync('hasuserid', this.data.hasuserid);  
+      wx.setStorageSync('hasuserid', this.data.hasuserid);
+
+      // 登录积分奖励
+      addPoints('login', 1);
+
       // wx.request({
       //   url: 'http://2l35209f44.iok.la/updateuserinfo',
       //   method:'POST',

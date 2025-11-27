@@ -8,10 +8,18 @@
       <text style="flex:1;text-align:end;">></text>
       <view class="sign">
       <text>已认证学生</text>
-      
+
       </view>
     </view>
-    
+
+  </view>
+
+  <!-- 积分显示 -->
+  <view class="points-section">
+    <view class="points-display">
+      <image src="/images/score.png" class="points-icon"></image>
+      <text class="points-text">积分：{{totalPoints}}</text>
+    </view>
   </view>
   
   <view style="padding-top: 15rpx;">
@@ -32,11 +40,38 @@
       <text style="font-weight:520;font-size: 30rpx;padding-left: 25rpx;">添加店铺</text>
       <text style="margin-left:auto;padding-right: 50rpx;font-size: 38rpx;">></text>
     </view>
+    <!-- 浏览记录 -->
+    <view class="btnui" bindtap="toggleBrowseHistory" hover-class="button-hover">
+      <view class="icon"><image src="/images/recipe.png"></image></view>
+      <text style="font-weight:520;font-size: 30rpx;padding-left: 25rpx;">浏览记录 ({{browseHistory.length}})</text>
+      <text style="margin-left:auto;padding-right: 50rpx;font-size: 38rpx;">{{showHistory ? '∨' : '>'}}</text>
+    </view>
+
+    <!-- 浏览记录详情 -->
+    <view wx:if="{{showHistory}}" class="history-section">
+      <view wx:if="{{browseHistory.length === 0}}" class="no-history">
+        <text>暂无浏览记录</text>
+      </view>
+      <view wx:elif="{{browseHistory.length > 0}}" class="history-list">
+        <view wx:for="{{browseHistory}}" wx:key="food_id" class="history-item">
+          <view class="history-content">
+            <text class="history-text">食堂: {{item.shop_name}}</text>
+            <text class="history-time">{{item.timeFormatted}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+
     <!-- <button bindtap="gotoaboutus" class="button">关于我们</button> -->
     <view class="btnui" bindtap="gotoaboutus" hover-class="button-hover">
       <view class="icon"><image src="/images/about.png"></image></view>
       <text style="font-weight:520;font-size: 30rpx;padding-left: 25rpx;">关于我们</text>
       <text style="margin-left:auto;padding-right: 50rpx;font-size: 38rpx;">></text>
+    </view>
+
+    <!-- 注销账号按钮 -->
+    <view wx:if="{{haslogin}}" class="delete-btn" bindtap="deleteAccount" hover-class="delete-hover">
+      <text style="font-weight:520;font-size: 30rpx;color: #ff4757;">注销账号</text>
     </view>
 </view>
 
